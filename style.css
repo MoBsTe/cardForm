@@ -1,6 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url('../interactive-card-details-form-main/images/bg-main-desktop.png');
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card_contaiter {
+    width: 35%;
+    height: 100vh;
+    background-image: url(./images/bg-main-desktop.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.front_card {
+    margin-left: 570px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.card_number {
+    position: absolute;
+    top: 140px;
+    left: 48px;
+    font-size: 31px;
+    color: #fff;
+}
+
+.text_data {
+    display: flex;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    padding-left: 50px;
+    text-transform: uppercase;
+}
+
+.text_data p {
+    padding-right: 245px;
+}
+
+.back_card {
+    position: relative;
+    margin-left: 770px;
+}
+
+.text_card_back {
+    position: absolute;
+    top: 109px;
+    right: 64px;
+}
+
+.text_card_back p {
+    font-size: 18px;
+    color: #fff;
 }
