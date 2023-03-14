@@ -66,25 +66,57 @@
         <div class="card_number">
           0000 0000 0000 0000
         </div>
-        <div class="text_data">
-          <p>Felicia Leire</p>
-          <span>09/00</span>
+        <div class="card_text">
+          <div class="text_data">
+            <p class="full_name">Felicia Leire</p>
+          </div>
+          <div class="card_date">
+            <span class="date">09</span>
+            <span>/</span>
+            <span class="years">00</span>
+          </div>
         </div>
       </div>
     </div>
-
-
 
     <div class="back_card">
       <div class="card_img">
         <img src="./images/bg-card-back.png" alt="img">
         <div class="text_card_back">
-          <p>000</p>
+          <p class="cvc">000</p>
         </div>
       </div>
     </div>
   </div>
 
+  <form>
+    <div class="form_fullName">
+      <label class="form_label">cardholder name</label>
+      <input class="form_input" type="text" placeholder="Felicia Leire" required>
+    </div>
+    <div class="form_cardNumber">
+      <label class="form_label">card number</label>
+      <input class="form_input card" type="text" maxlength="19" placeholder="0000 0000 0000 0000" required>
+    </div>
+    <div class="form_card_date">
+      <label class="form_label_date">exp. date (mm/yy)</label>
+      <input class="form_input_date" type="text" maxlength="2" placeholder="MM" required>
+      <input class="form_input_date years" type="text" maxlength="2" placeholder="YY" required>
+      <!-- <label class="form_label_date">cvc</label> -->
+      <input class="form_input_num" type="text" maxlength="3" placeholder="e.g. 123" required>
+    </div>
+    <button class="btn_form">Confirm</button>
+  </form>
+
+  <div class="complet">
+    <img src="./images/icon-complete.svg" alt="complet">
+    <div class="img_text">Thank you!</div>
+    <div class="subtext">We've added your card details</div>
+    <button class="btn_form_s">Confirm</button>
+  </div>
+
+
+  <script src="main.js"></script>
 </body>
 
 </html>
