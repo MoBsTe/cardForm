@@ -33,13 +33,28 @@ formInput.addEventListener('input', () => {
 // Number Card
 formCardNum.addEventListener('input', () => {
     cardNum.textContent = formCardNum.value;
-    formCardNum.value.substring(0, 3);
-    console.log(formCardNum.value);
+    cardNum.textContent = cc_format(formCardNum.value);
+    console.log('Test', cc_format(formCardNum.value));
     if (cardNum.textContent == '') {
         cardNum.textContent = '0000 0000 0000 0000';
     };
-
 });
+
+
+function cc_format(value) {
+    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+    const matches = v.match(/\d{4,16}/g);
+    const match = matches && matches[0] || ''
+    const parts = []
+    for (i = 0, len = match.length; i < len; i += 4) {
+        parts.push(match.substring(i, i + 4))
+    }
+    if (parts.length) {
+        return parts.join(' ')
+    } else {
+        return value
+    }
+}
 
 // Input Month
 inputMonth.addEventListener('input', () => {
